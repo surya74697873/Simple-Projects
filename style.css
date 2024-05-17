@@ -1,0 +1,45 @@
+
+.container{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 80vh;
+  width: 90vw;
+}
+
+.panel{
+  color: #fff;
+  flex: 1;
+  margin: 0.5rem;
+  border-radius: 2.5rem;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: flex 0.75s ease-in;
+}
+
+.panel.active{
+  flex: 7;
+}
+
+h3{
+  font-size: 25px;
+  position: relative;
+  top: 90%;
+  left: 10%;
+  opacity: 0;
+  transition:opacity 1s ease-in;
+}
+
+.panel.active h3{
+  opacity: 1;
+}
+
+@media(orientation: landscape) {
+  .panel.active{
+    background-size : cover;
+  }
+}
